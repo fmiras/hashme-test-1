@@ -1,7 +1,6 @@
 require('dotenv').config()
 const { parse } = require('url')
 const { MongoClient } = require('mongodb')
-const { router, get } = require('microrouter')
 
 const { MONGO_URL, MONGO_DB } = process.env
 
@@ -14,7 +13,7 @@ const queryForHotels = async query => {
   return jobs
 }
 
-module.exports = async (req, res) => {
+module.exports = async req => {
   const query = parse(req.url, true).query
   const hotels = await queryForHotels(query)
   hotels.map(hotel => delete hotel._id)
