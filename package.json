@@ -1,7 +1,7 @@
 {
   "name": "hashme-test-1",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "src",
   "author": "Federico Miras <miras.federico@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -13,6 +13,7 @@
     "extends": "prettier"
   },
   "dependencies": {
+    "dotenv": "5.0.1",
     "micro": "9.1.4",
     "mongodb": "3.0.4"
   },
